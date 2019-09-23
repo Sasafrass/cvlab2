@@ -4,11 +4,11 @@ I = imread(image);
 
 switch kernel_type
     case 'box'
-        imOut = imboxfilt(I, 3);
+        imOut = imboxfilt(I, varargin{1});
         imshow(imOut);
-        fprintf('Not implemented\n')
     case 'median'
-        fprintf('Not implemented\n')
+        imOut = medfilt2(I, [varargin{1} varargin{1}]);
+        imshow(imOut);
     case 'gaussian'
         fprintf('Not implemented\n')
 end
