@@ -10,6 +10,7 @@ switch kernel_type
         imOut = medfilt2(I, [varargin{1} varargin{1}]);
         imshow(imOut);
     case 'gaussian'
-        fprintf('Not implemented\n')
+        imOut = imfilter(I, gauss2D(varargin{1}, varargin{2}));
+        imshow(imOut);
 end
 end
