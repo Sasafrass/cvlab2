@@ -10,4 +10,3 @@ RMSE = sqrt(mean(mean((I - Iroof).^2)));
 
 PSNR = 20 * log10(imax / RMSE);
 end
-
